@@ -1,0 +1,11 @@
+---
+- name: Playbook for Package Management and Patching
+  hosts: linux
+  become: true
+  
+  roles:
+    - role: datadisk-n01580452
+    - role: profile-n01580452
+    - role: user-n01580452
+    - role: webserver-n01580452
+

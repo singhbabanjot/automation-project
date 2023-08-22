@@ -1,0 +1,19 @@
+[linux]
+n01580452-linux1.centralindia.cloudapp.azure.com ansible_user=n01580452-BabanjotSingh
+n01580452-linux2.centralindia.cloudapp.azure.com ansible_user=n01580452-BabanjotSingh
+n01580452-linux3.centralindia.cloudapp.azure.com ansible_user=n01580452-BabanjotSingh
+
+[windows]
+n01580452-win1.centralindia.cloudapp.azure.com
+
+[os:children]
+linux
+windows
+
+[windows:vars]
+ansible_user=n01580452-babanjot
+ansible_password="admin@123"
+ansible_connection=winrm
+ansible_port=5985
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore
